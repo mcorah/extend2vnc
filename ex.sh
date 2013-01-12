@@ -64,13 +64,13 @@ do
 			CTXT="d"
 			;;
 		-h)
-			echo "This script is located at: $0\n"
+			echo "This script is located at: $0"
 			cat README
 			exit
 			;;
 		*)
-			echo "bad xarg: $i\n"
-			echo "This script is located at: $0\n"
+			echo "bad arg: $i"
+			echo "This script is located at: $0"
 			cat README
 			exit
 			;;
@@ -85,8 +85,8 @@ do
 			CTXT="none"
 			;;
 		*)
-			echo "bad arg: $i\n"
-			echo "This script is located at: $0\n"
+			echo "bad arg: $i"
+			echo "This script is located at: $0"
 			cat README
 			exit
 			;;
