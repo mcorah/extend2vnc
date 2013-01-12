@@ -1,1 +1,56 @@
-README in progress
+[USAGE]
+	ex <args>
+[ARGS]
+	-f 		kill process and restart
+	-k [s] 	kill or soft kill (killing x2vnc which provides access from current desktop)
+	-l 		switch to landscape mode
+	-n|s|e|w	set location of vnc server relative main desktop, default: east
+	-d <num>	set display number of vncsession, default: 4
+	-h			help
+	
+[DEPENDS]
+	vnc4server
+	x2vnc
+		Available, thanks to Fredrik Hubinette at:
+			http://fredrik.hubbe.net/x2vnc.html
+
+[SETUP]
+	* place ex.sh and README in a safe location (~/.vnc is ideal)
+	* echo "alias ex=~/.vnc/ex.sh" >> ~/.bashrc
+
+	* edit defaults as desired:
+		* GEOMS can contain any number of resolutions
+			* second resolution is used by landscape mode
+			* subtract ~80 from vertical for use with android tablets
+
+	* configure vncserver desktop session in ~/.vnc/xstartup
+
+	* connect using your favorite vncviewer
+		* port will be 5900+<session number> default: 5904
+		* for android "Jump Desktop" seems to provide the best interface
+			for this kind of session
+
+[DESCRIPTION]
+	This is a script designed to simplify startup and interaction with a
+	vnc server to be used as if it is a second monitor. This is done
+	specifically with tablets in mind as there are currently few documented
+	options for configuring such devices in a Linux environment. Note that
+	this is achieved by creating a separate desktop session. The main session
+	is connected to the vnc server using x2vnc, an apparently little know
+	program that creates a window on one side of the main desktop, and sends
+	mouse and keyboard input to the vnc server in a similar manner to the
+	more well known option, synergy. This script provides the benefit of
+	being able to easily interact from the either the main desktop or the
+	second device while not messing with the main session and providing all
+	the benefits of a configurable second desktop. The ability to cleanly
+	switch between widescreen and landscape modes and use the second session
+	completely separately from the first are key benefits of the implementation.
+	However this method is limited as windows cannot be dragged from one
+	session to another. If being able to drag windows to a second device is
+	absolutely necessary this script will not be useful. However a good
+	option would be to configure the main session desktop to be wider than
+	the main monitor in some direction and then connecting via vnc and
+	panning to the extra space.
+	
+
+This script is written and maintained by Micah Corah
