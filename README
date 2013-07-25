@@ -35,22 +35,22 @@
 	vnc server to be used as if it is a second monitor. This is done
 	specifically with tablets in mind as there are currently few documented
 	options for configuring such devices in a Linux environment. Note that
-	this is achieved by creating a separate desktop session. The main session
-	is connected to the vnc server using x2vnc, an apparently little know
-	program that creates a window on one side of the main desktop, and sends
-	mouse and keyboard input to the vnc server in a similar manner to the
-	more well known option, synergy. This script provides the benefit of
-	being able to easily interact from the either the main desktop or the
-	second device while not messing with the main session and providing all
-	the benefits of a configurable second desktop. The ability to cleanly
+	this is achieved by creating a separate desktop session. The main
+  session is connected to the vnc server using x2vnc, an apparently little
+  know program that creates a window on one side of the main desktop, and
+  sends mouse and keyboard input to the vnc server in a similar manner to
+  the more well known option, synergy. This script provides the benefit
+  of being able to easily interact from the either the main desktop or
+  the second device while not messing with the main session and providing
+  all the benefits of a configurable second desktop. The ability to cleanly
 	switch between widescreen and landscape modes and use the second session
-	completely separately from the first are key benefits of the implementation.
-	However this method is limited as windows cannot be dragged from one
-	session to another. If being able to drag windows to a second device is
-	absolutely necessary this script will not be useful. However a good
-	option would be to configure the main session desktop to be wider than
-	the main monitor in some direction and then connecting via vnc and
-	panning to the extra space.
+	completely separately from the first are key benefits of the
+  implementation. However this method is limited as windows cannot be
+  dragged from one session to another. If being able to drag windows to
+  a second device is absolutely necessary this script will not be useful.
+  However a good option would be to configure the main session desktop to
+  be wider than the main monitor in some direction and then connecting via
+  vnc and panning to the extra space.
 	
 
 This script is written and maintained by Micah Corah
